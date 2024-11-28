@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Clima y Calentamiento Global</title>
+</head>
+<body>
+    <header>
+        <h1>Clima y Calentamiento Global</h1>
+    </header>
+    <main>
+        <h2>Introducción al Clima</h2>
+        <p>El clima se refiere a las condiciones atmosféricas promedio en un área durante un período prolongado. Incluye aspectos como la temperatura, la precipitación, la humedad, y el viento. A lo largo de la historia, el clima de la Tierra ha cambiado significativamente debido a factores naturales, pero en las últimas décadas, el cambio climático ha captado la atención mundial.</p>
+
+        <h3>Calentamiento Global</h3>
+        <p>El calentamiento global es un fenómeno relacionado con el aumento de la temperatura media de la atmósfera terrestre y de los océanos. Este aumento de temperatura se debe principalmente a las emisiones de gases de efecto invernadero, como el dióxido de carbono (CO2), que resultan de actividades humanas como la quema de combustibles fósiles, la deforestación y la industrialización.</p>
+
+        <h4>Efectos del Calentamiento Global</h4>
+        <ul>
+            <li>Aumento del nivel del mar debido al derretimiento de glaciares y casquetes polares.</li>
+            <li>Patrones climáticos más extremos, incluyendo sequías, inundaciones y tormentas más intensas.</li>
+            <li>Pérdida de biodiversidad y hábitats naturales debido a cambios en el clima.</li>
+        </ul>
+
+        <h5>Importancia de la Conciencia Climática</h5>
+        <p>Es crucial que la sociedad tome conciencia sobre la crisis climática y actúe en consecuencia. La educación y la acción individual pueden marcar la diferencia en la lucha contra el cambio climático. A través de pequeñas acciones, como reducir el uso de plásticos y promover el uso de energías renovables, todos podemos contribuir a un futuro más sostenible.</p>
+        
+        <div class="group" id="toggleButton">
+            Mostrar Pronóstico del Clima
+        </div>
+        
+        <div class="widget-container" id="widgetContainer">
+            <iframe src="https://www.meteoblue.com/en/weather/widget/daily/ip_romania_675514?geoloc=fixed&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=1&maxtemperature=1&mintemperature=1&windspeed=1&windgust=0&winddirection=1&uv=0&humidity=0&precipitation=1&precipitationprobability=1&spot=1&pressure=0&layout=light" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <div>
+                <a href="https://www.meteoblue.com/en/weather/week/ip_romania_675514?utm_source=daily_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank" rel="noopener">meteoblue</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Artículo inspirado en Wikipedia, adaptado para el público general.</p>
+    </footer>
+
+    <script>
+        // JavaScript para alternar la visibilidad del widget
+        const toggleButton = document.getElementById('toggleButton');
+        const widgetContainer = document.getElementById('widgetContainer');
+
+        toggleButton.addEventListener('click', () => {
+            // Alternar la visibilidad del widget
+            if (widgetContainer.style.display === 'none' || widgetContainer.style.display === '') {
+                widgetContainer.style.display = 'block'; // Mostrar el widget
+            } else {
+                widgetContainer.style.display = 'none'; // Ocultar el widget
+            }
+        });
+    </script>
+</body>
+</html>
